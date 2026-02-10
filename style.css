@@ -1,0 +1,198 @@
+/* Общие стили */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #1717cc 100%, #4C4CC0 100%);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.button {
+    display: inline-block;
+    padding: 20px 40px; /* Увеличен отступ */
+    background-color: #00A769; /* Яркий синий */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px; /* Более скругленные углы */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+.button:hover {
+    background-color: #007a4e; /* Темнее синий при наведении */
+}
+
+/* Шапка сайта */
+header {
+    background: linear-gradient(to right, #F4F4F4, #F4F4F4); /* Градиент для шапки */
+    color: #000000;
+    padding: 25px 0; /* Увеличен отступ */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+
+
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 235px; /* Увеличен размер логотипа */
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+header nav li {
+    margin-left: 50px; /* Увеличен отступ */
+}
+
+header nav a {
+    color: #3a3a3a;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+header nav a:hover {
+    color: #000000; /* Светлее при наведении */
+}
+
+/* Hero секция */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-bg.jpg') no-repeat center center/cover; /* Затемненный фон с градиентом */
+    color: #fff;
+    text-align: center;
+    padding: 120px 0; /* Увеличен отступ */
+}
+
+.hero h1 {
+    font-size: 45px; /* Увеличен размер заголовка */
+    margin-bottom: 25px; /* Увеличен отступ */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Тень для заголовка */
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 35px; /* Увеличен отступ */
+    line-height: 1.6; /* Улучшена читаемость */
+}
+
+/* Секция Услуги */
+.services {
+    padding: 60px 0; /* Увеличен отступ */
+    background-color: #fff; /* Светлый фон */
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 40px; /* Увеличен отступ */
+    color: #333; /* Цвет заголовка */
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Увеличен минимальный размер */
+    gap: 35px; /* Увеличен отступ */
+}
+
+.service-item {
+    text-align: center;
+    padding: 30px; /* Увеличен отступ */
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Более скругленные углы */
+    background-color: #f5f5f5; /* Светлый фон */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы */
+}
+
+.service-item:hover {
+    transform: translateY(-5px); /* Подъем при наведении */
+}
+
+.service-item img {
+    width: 100%;
+    margin-bottom: 25px; /* Увеличен отступ */
+    border-radius: 8px; /* Скругленные углы для изображений */
+}
+
+.service-item h3 {
+    color: #007bff; /* Акцентный цвет для заголовков */
+    margin-bottom: 15px; /* Увеличен отступ */
+}
+
+/* Секция О нас */
+.about {
+    padding: 60px 0; /* Увеличен отступ */
+    background-color: #f5f5f5; /* Светлый фон */
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 40px; /* Увеличен отступ */
+    color: #333; /* Цвет заголовка */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Увеличен отступ */
+}
+
+.about-content img {
+    width: 45%;
+    border-radius: 10px; /* Скругленные углы для изображений */
+}
+
+.about-content p {
+    font-size: 1.2em;
+    line-height: 1.7; /* Улучшена читаемость */
+    color: #555; /* Более приглушенный цвет текста */
+}
+
+/* Подвал */
+footer {
+    background-color: #232323; /* Темный фон */
+    color: #9E9D9D;
+    text-align: center;
+    padding: 25px 0; /* Увеличен отступ */
+}
+
+/* Медиа запросы для адаптивности */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content img {
+        width: 100%;
+    }
+}
